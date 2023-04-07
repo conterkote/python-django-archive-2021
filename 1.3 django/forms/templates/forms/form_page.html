@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css"%}">
+    <link rel="stylesheet" href="{% static "css/mystyle.css"%}">
+    <title>Forms</title>
+</head>
+<body>
+        <h1>Welcome to Forms page</h1>
+        <div class="container">
+            <form method="POST">
+                <h3>Fill the form please</h3>
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+</body>
+</html>

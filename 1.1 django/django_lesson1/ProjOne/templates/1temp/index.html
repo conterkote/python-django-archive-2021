@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Welcome</title>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+    <body>
+        <h1>I'am in index.html</h1>
+        <p><a href="home">Go to home</a></p>
+        <img src="{% static "images/preview.jpg" %}" alt="Not found 404">
+        <script src="{% static "script/script.js" %}">
+        </script>
+    </body>
+</html>

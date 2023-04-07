@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world page</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <h2>Look at the access records</h2>
+    {% if user_data %}
+        <div class = "django">
+            <table>
+                <thead>
+                    <th>Site</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                </thead>
+                {% for user in user_data %}
+                    {% if user == %}
+                    <tr>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.userpassword }}</td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>    
+    {% else %}
+        <h2>Not found!</h2>
+    {% endif %}
+
+</body>
+</html>
